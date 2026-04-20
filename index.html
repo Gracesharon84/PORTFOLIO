@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Sharon — Data Science Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div></div>
+
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <h1>
+      Grace <em>Sharon</em> G.<br>
+      <span style="font-size:18px; font-family:var(--mono); color:var(--accent); letter-spacing:0.12em;">
+        DATA SCIENCE ASPIRANT
+      </span>
+    </h1>
+
+    <p class="hero-desc">
+      Enthusiastic Data Science professional with a strong foundation in Python Programming, Statistical Analysis and
+      Data Visualization. Experienced in end-to-end data workflows from data collection, cleaning, and transformation
+      to exploratory data analysis, model building, and evaluation. Skilled in developing intelligent systems using
+      Machine Learning and Deep Learning techniques, with published AI-driven researches and papers. Passionate
+      about leveraging data-driven insights and advanced analytics to deliver innovative and impactful solutions.
+    </p>
+
+    <div class="hero-actions">
+      <a href="projects.html" class="btn btn-primary">View Projects</a>
+      <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+    </div>
+
+    <!-- ✅ INLINE CONTACT -->
+    <div class="hero-contact">
+      <a href="mailto:xaviersharon84@gmail.com">xaviersharon84@gmail.com</a>
+      <span>|</span>
+      <a href="https://www.linkedin.com/in/grace-sharon-g2004/" target="_blank">
+        LinkedIn ↗
+      </a>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Grace Sharon">
+    </div>
+
+  </section>
+
+  <section style="padding: 0 48px 80px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2px;">
+    <a href="about.html" class="card">
+      <div class="card-title">About me</div>
+      <div class="card-sub">Background & experience →</div>
+    </a>
+    <a href="skills.html" class="card">
+      <div class="card-title">Skills</div>
+      <div class="card-sub">Python, ML, Power BI →</div>
+    </a>
+    <a href="projects.html" class="card">
+      <div class="card-title">Projects</div>
+      <div class="card-sub">Research projects →</div>
+    </a>
+    <a href="achievements.html" class="card">
+      <div class="card-title">Achievements</div>
+      <div class="card-sub">Hackathons & awards →</div>
+    </a>
+    <a href="education.html" class="card">
+      <div class="card-title">Education</div>
+      <div class="card-sub">Academic details →</div>
+    </a>
+    <a href="certifications.html" class="card">
+      <div class="card-title">Certifications</div>
+      <div class="card-sub">Courses & learning →</div>
+    </a>
+    <a href="contact.html" class="card">
+      <div class="card-title">Contact</div>
+      <div class="card-sub">Let's collaborate →</div>
+    </a>
+  </section>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Grace Sharon G.</div>
+  <div class="footer-copy">Trichy, Tamil Nadu · India</div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('nav-links').classList.toggle('open');
+}
+
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('visible'),i*80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>

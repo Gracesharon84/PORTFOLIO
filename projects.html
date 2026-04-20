@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Grace Sharon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">xaviersharon84@gmail.com</a>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="education.html">Education</a></li>
+     <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header reveal">
+    <div class="page-eyebrow">Projects</div>
+    <h1 class="page-title">Project <em>Developed</em></h1>
+  </div>
+
+  <div class="content">
+    <div class="list-row reveal">
+      <div class="list-row-meta">2026</div>
+      <div>
+        <div class="list-row-title">Skill Gap Analyser</div>
+        <div class="list-row-desc">
+          An intelligent system that analyses a user's current skill profile against target job roles, identifying gaps and recommending personalised learning paths. Built using NLP and classification models to parse job descriptions and profile data.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Data Analysis</span>
+          <span class="tag">Visualization</span>
+        </div>
+      </div>
+      <div class="list-row-arrow">→</div>
+    </div>
+
+    <div class="list-row reveal">
+      <div class="list-row-meta">2025</div>
+      <div>
+        <div class="list-row-title">Oil Spill Detection using AIS</div>
+        <div class="list-row-desc">
+          Utilises Automatic Identification System (AIS) vessel tracking data to detect and classify oil spill events at sea. The model identifies suspicious vessel behaviour patterns and correlates them with spill indicators, enabling early environmental intervention.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">AIS Data</span>
+          <span class="tag">Streaamlit</span>
+          <span class="tag">Yagmail</span>
+        </div>
+      </div>
+      <div class="list-row-arrow">→</div>
+    </div>
+
+    <div class="list-row reveal">
+      <div class="list-row-meta">2025</div>
+      <div>
+        <div class="list-row-title">XAI — AI Model Interpretation using SHAP</div>
+        <div class="list-row-desc">
+          A research-driven project applying Explainable AI (XAI) techniques using SHAP (SHapley Additive exPlanations) values to interpret and visualise how ML models reach their predictions. Makes black-box models transparent and accountable.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">SHAP</span>
+          <span class="tag">XAI</span>
+          <span class="tag">Research</span>
+          <span class="tag">Matplotlib</span>
+        </div>
+      </div>
+      <div class="list-row-arrow">→</div>
+    </div>
+
+    <div class="list-row reveal">
+      <div class="list-row-meta">2023–24</div>
+      <div>
+        <div class="list-row-title">Rice Disease Classification using MLP</div>
+        <div class="list-row-desc">
+          Built a Multi-Layer Perceptron (MLP) neural network to classify rice plant diseases from image data. The system enables early and accurate detection of common diseases, supporting better crop management and agricultural productivity in Tamil Nadu.
+        </div>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Image Processing</span>
+          <span class="tag">MLP</span>
+          <span class="tag">Image Classification</span>
+          <span class="tag">NumPy</span>
+        </div>
+      </div>
+      <div class="list-row-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Grace Sharon G.</div>
+  <div class="footer-copy">Trichy, Tamil Nadu · India</div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('nav-links').classList.toggle('open'); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
