@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Grace Sharon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div style="display: flex; gap: 32px; align-items: center;">
+    <a class="nav-logo" href="index.html">xaviersharon84@gmail.com</a>
+    <a class="nav-logo" href="GRACE _SHARON_G_Data_Analyst.pdf" download style="color: var(--text); border: 1px solid var(--border); padding: 6px 14px; border-radius: 4px;">My Resume</a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="education.html">Education</a></li>
+     <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header reveal">
+    <div class="page-eyebrow">Contact</div>
+    <h1 class="page-title">Contact  <em>   Details</em></h1>
+  </div>
+
+  <div class="content">
+    <div class="grid-2" style="gap:64px; align-items:start;">
+      <div class="reveal">
+        <p style="font-size:16px; color:var(--muted); line-height:1.9; margin-bottom:32px;">
+          I'm Open to Data Science and related Internships, Research Collaborations and Full-time opportunities available across India, especially in Coimbatore, Bangalore, and Chennai.
+        </p>
+
+        <a href="mailto:xaviersharon84@gmail.com" class="contact-link">
+          <span class="cl-label">Email</span>
+          <span class="cl-value">xaviersharon84@gmail.com</span>
+        </a>
+        <a href="tel:+918870333635" class="contact-link">
+          <span class="cl-label">Phone</span>
+          <span class="cl-value">+91 88703 33635</span>
+        </a>
+        <a href="https://www.linkedin.com/in/grace-sharon-g2004/" download rel="noopener" class="contact-link">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-value">grace-sharon-g2004 ↗</span>
+        </a>
+        <a href="https://github.com/Gracesharon84" download rel="noopener" class="contact-link">
+          <span class="cl-label">GitHub</span>
+          <span class="cl-value">Gracesharon84 ↗</span>
+        </a>
+        <div class="contact-link" style="border-bottom:none;">
+          <span class="cl-label">Location</span>
+          <span class="cl-value">Tiruchirappalli, Tamil Nadu</span>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div style="background:var(--surface); padding:32px; border-radius:2px;">
+          <div style="font-family:var(--mono); font-size:11px; color:var(--accent); letter-spacing:0.12em; margin-bottom:20px;">Send a message</div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div>
+              <label style="font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-bottom:8px; letter-spacing:0.08em;">Your name</label>
+              <input type="text" placeholder="Grace Sharon" style="width:100%; background:var(--bg); border:1px solid var(--border); color:var(--text); padding:12px 14px; font-family:var(--sans); font-size:14px; border-radius:2px; outline:none; transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+            </div>
+            <div>
+              <label style="font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-bottom:8px; letter-spacing:0.08em;">Email address</label>
+              <input type="email" placeholder="you@example.com" style="width:100%; background:var(--bg); border:1px solid var(--border); color:var(--text); padding:12px 14px; font-family:var(--sans); font-size:14px; border-radius:2px; outline:none; transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+            </div>
+            <div>
+              <label style="font-family:var(--mono); font-size:11px; color:var(--muted); display:block; margin-bottom:8px; letter-spacing:0.08em;">Message</label>
+              <textarea rows="5" placeholder="I'd love to collaborate on..." style="width:100%; background:var(--bg); border:1px solid var(--border); color:var(--text); padding:12px 14px; font-family:var(--sans); font-size:14px; border-radius:2px; outline:none; resize:vertical; transition:border-color 0.2s;"
+                onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            </div>
+            <button onclick="handleSend(this)" class="btn btn-primary" style="align-self:flex-start; border:none; cursor:pointer;">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px; padding-top:48px; border-top:1px solid var(--border);">
+      <p style="font-family:var(--serif); font-size:clamp(24px,3vw,36px); font-weight:400; color:var(--muted); max-width:600px; line-height:1.4;" class="reveal">
+        "Passionate about leveraging data-driven insights to deliver <em style="color:var(--text); font-style:italic;">innovative and impactful solutions.</em>"
+      </p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Grace Sharon G.</div>
+  <div class="footer-copy">Trichy, Tamil Nadu · India</div>
+</footer>
+<script>
+function toggleMenu(){ document.getElementById('nav-links').classList.toggle('open'); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+function handleSend(btn) {
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Sent!';
+    btn.style.background = 'transparent';
+    btn.style.color = 'var(--accent)';
+  }, 1200);
+}
+</script>
+</body>
+</html>

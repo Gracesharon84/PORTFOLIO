@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications — Grace Sharon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div style="display: flex; gap: 32px; align-items: center;">
+    <a class="nav-logo" href="index.html">xaviersharon84@gmail.com</a>
+    <a class="nav-logo" href="GRACE _SHARON_G_Data_Analyst.pdf" download style="color: var(--text); border: 1px solid var(--border); padding: 6px 14px; border-radius: 4px;">My Resume</a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="certifications.html" class="active">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header reveal">
+    <div class="page-eyebrow">Experience & Certifications</div>
+    <h1 class="page-title">My <em>Experience</em></h1>
+  </div>
+
+  <div class="content">
+
+    <!-- ✅ EXPERIENCE -->
+    <div class="card reveal" style="margin-bottom:48px;">
+      <div class="card-label">CODSOFT · 2024</div>
+      <div class="card-title">Data Science Intern</div>
+
+      <div class="card-sub" style="margin-top:10px; line-height:1.7;">
+        Completed a 4-week virtual internship focused on developing practical skills in data science and machine learning.
+        Worked on assigned projects, gaining hands-on experience in data analysis, model building, and problem-solving.
+      </div>
+
+      <!-- TASKS -->
+      <div style="margin-top:20px; display:flex; flex-direction:column; gap:14px;">
+
+        <div>
+          <strong style="color:var(--accent);">Task 1: Titanic Survival Prediction 🚢</strong>
+          <p style="font-size:13px; color:var(--muted); margin-top:6px;">
+            Worked with real-world data, exploring features such as age, gender, ticket class, and fare to uncover insights.
+            Applied data preprocessing, feature engineering, and machine learning techniques to build predictive models.
+          </p>
+        </div>
+
+        <div>
+          <strong style="color:var(--accent);">Task 2: Iris Flower Classification 🌸</strong>
+          <p style="font-size:13px; color:var(--muted); margin-top:6px;">
+            Built a classification model using petal and sepal measurements to accurately predict flower species with high precision.
+          </p>
+        </div>
+
+        <div>
+          <strong style="color:var(--accent);">Task 3: Credit Card Fraud Detection 💳</strong>
+          <p style="font-size:13px; color:var(--muted); margin-top:6px;">
+            Developed a fraud detection model using algorithms such as Logistic Regression and Random Forest to classify transactions as fraudulent or genuine.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ✅ CERTIFICATIONS TITLE -->
+    <h1 class="page-title" style="margin-bottom:32px;">My <em>Certifications</em></h1>
+
+    <!-- CERTIFICATIONS -->
+    <div class="grid-auto reveal">
+
+      <div class="card">
+        <div class="card-label">Deloitte · 2025</div>
+        <div class="card-title">Data Analytics Job Simulation</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">LinkedIn Learning · 2025</div>
+        <div class="card-title">Machine Learning with Python: Foundation</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Microsoft Learn · 2024</div>
+        <div class="card-title">Fundamentals of Machine Learning</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Microsoft Learn · 2024</div>
+        <div class="card-title">Fundamentals of AI Concepts</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Udemy · 2024</div>
+        <div class="card-title">Data Science: R Programming Diploma</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">NPTEL SWAYAM · 2023</div>
+        <div class="card-title">Enhancing Soft Skills & Personality</div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">NPTEL SWAYAM · 2022</div>
+        <div class="card-title">Body Language: Key to Professional Success</div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Grace Sharon G.</div>
+  <div class="footer-copy">Trichy, Tamil Nadu · India</div>
+</footer>
+
+<script>
+function toggleMenu(){ document.getElementById('nav-links').classList.toggle('open'); }
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('visible'),i*80);
+      obs.unobserve(e.target);
+    }
+  });
+}, {threshold:0.1});
+
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>

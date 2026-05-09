@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Grace Sharon</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <div style="display: flex; gap: 32px; align-items: center;">
+    <a class="nav-logo" href="index.html">xaviersharon84@gmail.com</a>
+    <a class="nav-logo" href="GRACE _SHARON_G_Data_Analyst.pdf" download style="color: var(--text); border: 1px solid var(--border); padding: 6px 14px; border-radius: 4px;">My Resume</a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="education.html">Education</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="page-header reveal">
+    <h1 class="page-title">About  <em>Me</em></h1>
+  </div>
+
+  <div class="content">
+    <div class="grid-2" style="gap: 64px; margin-bottom: 64px;">
+      <div class="reveal">
+        <p style="font-size:16px; color:var(--muted); line-height:1.9; margin-bottom:20px;">
+          I'm an enthusiastic <strong style="color:var(--text); font-weight:500;">Data Science professional</strong> with a strong foundation in Python Programming, Statistical Analysis and Data Visualization — passionate about turning raw data into innovative, impactful solutions.
+        </p>
+        <p style="font-size:16px; color:var(--muted); line-height:1.9;">
+          Experienced in <strong style="color:var(--text); font-weight:500;">end-to-end data workflows</strong> — from data collection, cleaning, and transformation to exploratory data analysis, model building, and evaluation.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <div class="detail-row">
+          <span class="detail-label">Full name</span>
+          <span class="detail-value">Grace Sharon G.</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Tiruchirappalli, Tamil Nadu</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Highest Qualification</span>
+          <span class="detail-value">M.Sc. Data Science (2024–2026)</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">CGPA</span>
+          <span class="detail-value" style="color:var(--accent)">8.26</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Experience</span>
+          <span class="detail-value">Data Science Intern, CODSOFT</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Key Skills</span>
+          <span class="detail-value" style="color:var(--accent)">Python, Advanced Excel, PowerBI, SQL</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Status</span>
+          <span class="detail-value" style="color:var(--accent)">Open to work (Full-time , Intern)</span>
+        </div>
+
+        <div style="margin-top: 32px; display: flex; gap: 16px;">
+          <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+          <a href="GRACE _SHARON_G_Data_Analyst.pdf" class="btn btn-secondary" download>My Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-copy">© 2026 Grace Sharon G.</div>
+  <div class="footer-copy">Trichy, Tamil Nadu · India</div>
+</footer>
+
+<script>
+function toggleMenu(){ document.getElementById('nav-links').classList.toggle('open'); }
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
